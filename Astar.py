@@ -1,16 +1,16 @@
 from flask import Flask, request, jsonify
+import heapq
 
 app = Flask(__name__)
 
 # A* algorithm function
 def a_star_search(start, goal, obstacles):
-    open_list = [start]
+    open_list = [(calculate_distance(start, goal), 0, start)]  # (f_score, g_score, node)
     came_from = {}
     g_score = {start: 0}
-    f_score = {start: calculate_distance(start, goal)}
 
     while open_list:
-        current = min(open_list, key=lambda x: f_score.get(x, float('inf')))
+        _, _, current = heapq.heappop(open_list)
         if current == goal:
             path = []
             while current in came_from:
@@ -19,15 +19,13 @@ def a_star_search(start, goal, obstacles):
             path.append(start)
             return path[::-1]
 
-        open_list.remove(current)
         for neighbor in get_neighbors(current, obstacles):
-            tentative_g_score = g_score[current] + calculate_distance(current, neighbor)
+            tentative_g_score = g_score[current] + 1  # Assuming each move has a cost of 1
             if tentative_g_score < g_score.get(neighbor, float('inf')):
                 came_from[neighbor] = current
                 g_score[neighbor] = tentative_g_score
-                f_score[neighbor] = tentative_g_score + calculate_distance(neighbor, goal)
-                if neighbor not in open_list:
-                    open_list.append(neighbor)
+                f_score = tentative_g_score + calculate_distance(neighbor, goal)
+                heapq.heappush(open_list, (f_score, tentative_g_score, neighbor))
 
     return None
 

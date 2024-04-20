@@ -1,0 +1,62 @@
+2023-07-30T14:07:20  Welcome, you are now connected to log-streaming service.
+Starting Log Tail -n 10 of existing logs ----
+/home/LogFiles/__lastCheckTime.txt  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)07/30/2023 14:06:11
+
+/home/LogFiles/Application/diagnostics-20230730.txt  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/Application/diagnostics-20230730.txt)
+2023-07-30 14:06:27.904 +00:00 [Debug] Microsoft.AspNetCore.Hosting.Diagnostics: Loaded hosting startup assembly Middleware.Host
+2023-07-30 14:06:27.904 +00:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2023-07-30 14:06:27.921 +00:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Production
+2023-07-30 14:06:27.921 +00:00 [Information] Microsoft.Hosting.Lifetime: Content root path: /app
+2023-07-30 14:06:27.921 +00:00 [Debug] Microsoft.Extensions.Hosting.Internal.Host: Hosting started
+2023-07-30 14:06:27.973 +00:00 [Debug] Microsoft.AspNetCore.Server.Kestrel.Connections: Connection id "0HMSH0OLFBANL" accepted.
+2023-07-30 14:06:27.980 +00:00 [Debug] Microsoft.AspNetCore.Server.Kestrel.Connections: Connection id "0HMSH0OLFBANL" started.
+2023-07-30 14:06:28.090 +00:00 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting HTTP/1.1 GET http://169.254.130.9:8181/robots933456.txt - -
+2023-07-30 14:06:28.183 +00:00 [Trace] Middleware: Request came in on normal port, sending to normal target http://169.254.130.4:8000/robots933456.txt
+2023-07-30 14:06:28.183 +00:00 [Trace] Middleware: Forwarding request to http://169.254.130.4:8000/robots933456.txt
+
+/home/LogFiles/kudu/trace/661abe677a6e-5ea87387-7ddf-4322-b8ac-272315d41a64.txt  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/661abe677a6e-5ea87387-7ddf-4322-b8ac-272315d41a64.txt)
+2023-07-30T13:37:54  Startup Request, url: /api/deployments/latest?deployer=Push-Deployer&time=2023-07-30_13-36-46Z, method: GET, type: request, pid: 92,1,15, SCM_DO_BUILD_DURING_DEPLOYMENT: True, ScmType: None
+
+/home/LogFiles/kudu/trace/9acd5facc3e8-fb901f2e-4940-4411-8573-fee0a6ca5dbd.txt  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/9acd5facc3e8-fb901f2e-4940-4411-8573-fee0a6ca5dbd.txt)
+2023-07-30T13:32:00  Startup Request, url: /api/logs/docker, method: GET, type: request, pid: 86,1,7, SCM_DO_BUILD_DURING_DEPLOYMENT: True, ScmType: None
+
+/home/LogFiles/kudu/trace/e58eec3a59a4-f1c258d7-cc36-4b77-abb4-8d65024f37f3.txt  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/e58eec3a59a4-f1c258d7-cc36-4b77-abb4-8d65024f37f3.txt)
+2023-07-30T08:18:26  Startup Request, url: /api/deployments/?api-version=2018-11-01, method: GET, type: request, pid: 92,1,5, ScmType: None, SCM_DO_BUILD_DURING_DEPLOYMENT: True
+
+/home/LogFiles/kudu/trace/e7b3a92268b1-bb37aca5-e2fd-4339-82ca-060913e40024.txt  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/e7b3a92268b1-bb37aca5-e2fd-4339-82ca-060913e40024.txt)
+2023-07-30T13:38:06  Startup Request, url: /api/deployments/latest?deployer=Push-Deployer&time=2023-07-30_13-36-46Z, method: GET, type: request, pid: 92,1,7, SCM_DO_BUILD_DURING_DEPLOYMENT: True, ScmType: None
+
+/home/LogFiles/kudu/trace/e8d4dd4b93a9-02090097-fc52-4351-b1f3-993465c98a17.txt  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/e8d4dd4b93a9-02090097-fc52-4351-b1f3-993465c98a17.txt)
+2023-07-30T08:11:37  Startup Request, url: /api/logstream/, method: GET, type: request, pid: 86,1,5, SCM_DO_BUILD_DURING_DEPLOYMENT: True, ScmType: None
+
+/home/LogFiles/2023_07_30_lw0sdlwk0001OA_default_docker.log  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/2023_07_30_lw0sdlwk0001OA_default_docker.log)
+2023-07-30T14:06:20.924172852Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'start_appservice.sh'
+2023-07-30T14:06:21.244080508Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2023-07-30T14:06:21.244162812Z Could not find operation ID in manifest. Generating an operation id...
+2023-07-30T14:06:21.244171913Z Build Operation ID: f273283f-24da-48ff-b084-0d06345722b1
+2023-07-30T14:06:21.473642664Z Oryx Version: 0.2.20230512.3, Commit: a81ce1fa16b6e03d37f79d3ba5e99cf09b28e4ef, ReleaseTagName: 20230512.3
+2023-07-30T14:06:21.522171603Z Writing output script to '/opt/startup/startup.sh'
+2023-07-30T14:06:21.611450142Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2023-07-30T14:06:21.611897567Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2023-07-30T14:06:21.621791425Z /opt/startup/startup.sh: 23: start_appservice.sh: not found
+
+
+/home/LogFiles/2023_07_30_lw0sdlwk0001OA_docker.log  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/2023_07_30_lw0sdlwk0001OA_docker.log)
+2023-07-30T14:06:20.208Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
+2023-07-30T14:06:20.291Z INFO  - Starting container for site
+2023-07-30T14:06:20.298Z INFO  - docker run -d --expose=8181 --expose=8082 --name app-backend-uxse4ekppkqfk_0_834085b0_middleware -e WEBSITE_CORS_ALLOWED_ORIGINS=https://portal.azure.com,https://ms.portal.azure.com -e WEBSITE_CORS_SUPPORT_CREDENTIALS=False -e WEBSITE_SITE_NAME=app-backend-uxse4ekppkqfk -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=app-backend-uxse4ekppkqfk.azurewebsites.net -e WEBSITE_INSTANCE_ID=37cbba0356dd55756d185822182c00f962ddbcad00273bb3e70b862499987406 -e HTTP_LOGGING_ENABLED=1 -e WEBSIT2023-07-30T14:06:23.381Z INFO  - Initiating warmup request to container app-backend-uxse4ekppkqfk_0_834085b0_msiProxy for site app-backend-uxse4ekppkqfk
+2023-07-30T14:06:23.453Z INFO  - Container app-backend-uxse4ekppkqfk_0_834085b0_msiProxy for site app-backend-uxse4ekppkqfk initialized successfully and is ready to serve requests.
+2023-07-30T14:06:23.460Z INFO  - Initiating warmup request to container app-backend-uxse4ekppkqfk_0_834085b0 for site app-backend-uxse4ekppkqfk
+2023-07-30T14:06:23.532Z ERROR - Container app-backend-uxse4ekppkqfk_0_834085b0 for site app-backend-uxse4ekppkqfk has exited, failing site start
+2023-07-30T14:06:23.539Z INFO  - Initiating warmup request to container app-backend-uxse4ekppkqfk_0_834085b0_middleware for site app-backend-uxse4ekppkqfk
+2023-07-30T14:06:28.550Z INFO  - Container app-backend-uxse4ekppkqfk_0_834085b0_middleware for site app-backend-uxse4ekppkqfk initialized successfully and is ready to serve requests.
+2023-07-30T14:06:28.591Z ERROR - Container app-backend-uxse4ekppkqfk_0_834085b0 didn't respond to HTTP pings on port: 8000, failing site start. See container logs for debugging.
+2023-07-30T14:06:28.635Z INFO  - Stopping site app-backend-uxse4ekppkqfk because it failed during startup.
+
+/home/LogFiles/2023_07_30_lw0sdlwk0001OA_easyauth_docker.log  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/2023_07_30_lw0sdlwk0001OA_easyauth_docker.log)
+
+/home/LogFiles/2023_07_30_lw0sdlwk0001OA_msi_docker.log  (https://app-backend-uxse4ekppkqfk.scm.azurewebsites.net/api/vfs/LogFiles/2023_07_30_lw0sdlwk0001OA_msi_docker.log)
+
+Ending Log Tail of existing logs ---
+Starting Live Log Stream ---
+

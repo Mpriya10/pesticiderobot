@@ -1,13 +1,6 @@
-import requests
-import json
+from flask import Flask, request, jsonify
 
-# Define the URL for the NodeMCU
-node_url = "http://your-nodemcu-url/path"
-
-# Define the environment
-start = (0, 0)  # Starting point (x, y)
-goal = (5, 5)  # Goal point (x, y)
-obstacles = {(1, 2), (2, 2), (3, 2)}  # Obstacles as a set of coordinates
+app = Flask(__name__)
 
 # A* algorithm function
 def a_star_search(start, goal, obstacles):
@@ -48,16 +41,18 @@ def get_neighbors(point, obstacles):
 def calculate_distance(point1, point2):
     return abs(point2[0] - point1[0]) + abs(point2[1] - point1[1])  # Manhattan distance
 
-# Calculate the optimal path
-path = a_star_search(start, goal, obstacles)
+# API endpoint to receive path calculation request
+@app.route('/path', methods=['POST'])
+def calculate_path():
+    data = request.get_json()
+    start = tuple(data['start'])
+    goal = tuple(data['goal'])
+    obstacles = set(map(tuple, data['obstacles']))
+    path = a_star_search(start, goal, obstacles)
+    if path:
+        return jsonify({'path': path})
+    else:
+        return jsonify({'error': 'Failed to find a path'}), 404
 
-# Convert path to JSON and send to NodeMCU
-path_json = json.dumps(path)
-
-response = requests.post(node_url, data=path_json, headers={"Content-Type": "application/json"})
-
-# Check the response
-if response.status_code == 200:
-    print("Path successfully sent to NodeMCU")
-else:
-    print("Failed to send path to NodeMCU")
+if __name__ == '__main__':
+    app.run(debug=True)

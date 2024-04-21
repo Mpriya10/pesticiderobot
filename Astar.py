@@ -50,7 +50,7 @@ def calculate_path():
     if path:
         return jsonify({'path': path})
     else:
-        return jsonify({'error': 'Failed to find a path'}), 404
+        return jsonify({'error': 'Failed to find a path'}),
 
 if __name__ == '__main__':
     app.run(debug=True)
